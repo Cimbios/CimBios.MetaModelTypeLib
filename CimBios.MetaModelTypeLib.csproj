@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Title>CimBios.MetaModelTypeLib</Title>
+        <Authors>CimBios Org</Authors>
+        <Description>CimBios canonical model, which represents meta entites (Class, Property, Enum, e.t.c) like CimBios model objects. It's uses to design custom CIM profiles and type libraries.</Description>
+        <Copyright>Copyright (C) 2025 Yuri A. Kovalenko a.k.a belizahrt &lt;belizahrt@gmail.com&gt;</Copyright>
+        <PackageProjectUrl>https://github.com/Cimbios/CimBios.MetaModelTypeLib</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/Cimbios/CimBios.MetaModelTypeLib</RepositoryUrl>
+        <PackageTags>CIM, Common Information Model, CIMXML, RDFXML, IEC61970, GOST58651, RFCIM</PackageTags>
+        <AssemblyVersion>1.0.0</AssemblyVersion>
+        <FileVersion>1.0.0</FileVersion>
+        <SignAssembly>true</SignAssembly>
+        <AssemblyOriginatorKeyFile>cbios.snk</AssemblyOriginatorKeyFile>
+        <PublicSign>true</PublicSign>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Schemas\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="CimBios.Core.CimModel.DatatypeLib" Version="1.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Include="Schemas\**\*.*">
+            <IncludeInPackage>true</IncludeInPackage>
+            <PackageCopyToOutput>true</PackageCopyToOutput>
+        </Content>
+    </ItemGroup>
+
+</Project>
